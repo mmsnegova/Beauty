@@ -1,0 +1,11 @@
+.contact {
+  display: flex;
+  align-items: center;
+  &__tel {
+    @include font(16px, 19px, $black);
+    margin-right: 40px;
+  }
+  &__button {
+    border-color: $accent;
+  }
+}

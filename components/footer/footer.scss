@@ -1,0 +1,49 @@
+.footer {
+  &__about {
+    background-color: $white;
+    padding-top: 37px;
+    padding-bottom: 38px;
+  }
+  &__about-row {
+    display: flex;
+    align-items: center;
+  }
+  &__network {
+    display: flex;
+    margin-right: 205px;
+  }
+  &__network-item {
+    border: 2px solid $accent;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+    margin-right: 20px;
+    cursor: pointer;
+    @extend %opacity;
+    &:hover {
+      opacity: 0.8;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__adress {
+    @include font(14px, 16px, $black);
+    flex: 1 1 auto;
+  }
+  &__info {
+    background-color: $light_theme;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  &__info-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__description {
+    @include font(12px, 14px, $gray);
+  }
+}

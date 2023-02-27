@@ -1,0 +1,64 @@
+.banner {
+  background-color: $accent;
+  overflow: hidden;
+  height: 604px;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__info {
+    width: 308px;
+  }
+
+  &__title {
+    @include font(48px, 56px, $white, $large);
+    margin-bottom: 50px;
+  }
+
+  &__description {
+    @include font(14px, 20px, $white);
+    margin-bottom: 50px;
+  }
+
+  &__more {
+    border-color: $white;
+    color: $white;
+  }
+
+  &__figure {
+    width: 667px;
+    height: 667px;
+    background-color: $transparent30_white;
+    border-radius: 50%;
+    position: relative;
+    margin-right: 5px;
+    top: -26px;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 859px;
+      height: 859px;
+      border-radius: 50%;
+      background-color: $transparent40_white;
+      position: relative;
+      top: -91px;
+      left: -91px;
+    }
+    &::after {
+      content: "";
+      display: block;
+      width: 584px;
+      height: 584px;
+      border-radius: 50%;
+      background: url("../../images/black-chair.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 36px;
+      left: 47px;
+    }
+  }
+}

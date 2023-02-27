@@ -1,0 +1,21 @@
+.about {
+  background-color: $light_theme;
+  padding-top: 17px;
+  padding-bottom: 16px;
+  ul {
+    display: flex;
+    justify-content: center;
+  }
+  &__item {
+    @include font(14px, 16px, $dark);
+    margin-right: 30px;
+    cursor: pointer;
+    @extend %opacity;
+    &:hover {
+      opacity: 0.8;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

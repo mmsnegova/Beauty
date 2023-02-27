@@ -1,0 +1,21 @@
+.menu {
+  background-color: $white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  ul {
+    display: flex;
+    justify-content: center;
+  }
+  &__item {
+    @include font(16px, 19px, $black);
+    margin-right: 40px;
+    cursor: pointer;
+    @extend %opacity;
+    &:hover {
+      opacity: 0.8;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

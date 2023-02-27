@@ -1,0 +1,25 @@
+.header {
+  background-color: $white;
+  &__content {
+    border-bottom: 1px solid $light_theme;
+  }
+  &__info {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+  &__logo {
+    background-image: $logo;
+    width: 80px;
+    height: 80px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 20px;
+  }
+  &__name {
+    @include font(36px, 42px, $accent, 700);
+    letter-spacing: 0.1em;
+    flex: 1 1 auto;
+  }
+}

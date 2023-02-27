@@ -1,0 +1,32 @@
+.cards {
+  justify-content: center;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fill, 255px);
+
+  &__item {
+    text-align: center;
+    background-color: $white;
+    padding: 25px 30px;
+  }
+  &__image {
+    width: 125px;
+    height: 166px;
+    margin-bottom: 20px;
+  }
+  &__description {
+    @include font(14px, 20px, $dark);
+    margin-bottom: 20px;
+  }
+  &__price {
+    @include font(21px, 25px, $black);
+    margin-bottom: 20px;
+  }
+  &__button {
+    width: 130px;
+    height: 30px;
+    background-color: $accent;
+    border: none;
+    @include font(14px, 16px, $white);
+  }
+}

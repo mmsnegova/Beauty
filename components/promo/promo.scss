@@ -1,0 +1,44 @@
+.promo {
+  background-color: $light_theme;
+  &__row {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(540px, 1fr));
+    justify-content: center;
+    padding-bottom: 132px;
+  }
+  &__item {
+    background-color: $accent;
+    display: flex;
+    justify-content: space-between;
+    padding: 35px 45px 35px 40px;
+  }
+  &__column {
+    width: 250px;
+  }
+
+  &__title {
+    @include font(18px, 21px, $white, $large);
+    margin-bottom: 25px;
+  }
+
+  &__description {
+    @include font(14px, 20px, $white);
+    margin-bottom: 25px;
+  }
+  &__input {
+    border-radius: 30px;
+    background-color: $white;
+    padding: 8px 25px;
+    @include font(14px, 16px, $black);
+    &::placeholder {
+      @include font(14px, 16px, $light_gray);
+    }
+  }
+
+  &__button {
+    height: 35px;
+    border-color: $white;
+    @include font(14px, 16px, $white);
+  }
+}
