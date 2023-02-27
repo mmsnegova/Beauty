@@ -7,8 +7,13 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 17px;
+    @media screen and (max-width: $mobile) {
+      flex-direction: column-reverse;
+      text-align: center;
+      gap: 30px;
+    }
   }
   &__title {
-    @include font(24px, 28px, $black, $large);
+    @include font(24px, 28px, $black, $bold);
   }
 }

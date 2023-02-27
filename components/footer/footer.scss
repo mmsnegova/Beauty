@@ -7,10 +7,24 @@
   &__about-row {
     display: flex;
     align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    @media screen and (max-width: $mobile) {
+      flex-direction: column;
+      justify-content: center;
+    }
   }
   &__network {
     display: flex;
-    margin-right: 205px;
+    margin-right: 81px;
+
+    @media screen and (max-width: $tablet) {
+      flex: 1 1 auto;
+    }
+    @media screen and (max-width: $mobile) {
+      margin-right: 0;
+    }
   }
   &__network-item {
     border: 2px solid $accent;
@@ -32,7 +46,6 @@
   }
   &__adress {
     @include font(14px, 16px, $black);
-    flex: 1 1 auto;
   }
   &__info {
     background-color: $light_theme;
@@ -42,6 +55,12 @@
   &__info-row {
     display: flex;
     justify-content: space-between;
+    @media screen and (max-width: $tablet) {
+      text-align: center;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
   }
   &__description {
     @include font(12px, 14px, $gray);

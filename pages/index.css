@@ -108,7 +108,27 @@ h6 {
   font-weight: 400;
 }
 
-.footer__network-item, .menu__item, .button, .about__item {
+@media screen and (max-width: 1023px) {
+  .menu, .about__menu, .header__contact {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .header__menu-burger::after, .header__menu-burger::before, .header__menu-burger span {
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    background: #66c05d;
+    margin: auto;
+  }
+}
+
+.footer__network-item, .menu__item, .button, .about__menu-item {
   transition: opacity 0.3s ease;
 }
 
@@ -129,6 +149,18 @@ h6 {
   max-width: 1110px;
   margin: 0 auto;
 }
+@media screen and (max-width: 1150px) {
+  .conteiner {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .conteiner {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 
 .header {
   background-color: #fff;
@@ -142,6 +174,11 @@ h6 {
   display: flex;
   align-items: center;
 }
+@media screen and (max-width: 1023px) {
+  .header__info {
+    justify-content: space-between;
+  }
+}
 .header__logo {
   background-image: url("../../images/logo.png");
   width: 80px;
@@ -150,7 +187,7 @@ h6 {
   background-size: cover;
   margin-right: 20px;
 }
-.header__name {
+.header__title {
   font-size: 36px;
   line-height: 42px;
   color: #66c05d;
@@ -158,29 +195,74 @@ h6 {
   letter-spacing: 0.1em;
   flex: 1 1 auto;
 }
+@media screen and (max-width: 1023px) {
+  .header__title {
+    flex: 0 0 auto;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .header__menu-burger {
+    position: relative;
+    width: 24px;
+    height: 21px;
+    display: block;
+    margin: 0;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .header__menu-burger span {
+    top: 9px;
+    opacity: 1;
+    transition: opacity 0.5s;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .header__menu-burger::before {
+    content: "";
+    top: 0;
+    transition: 0.3s;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .header__menu-burger::after {
+    content: "";
+    bottom: 0;
+    transition: 0.3s;
+  }
+}
+@media screen and (hover: hover) and (pointer: fine) {
+  .header__menu-burger:hover {
+    opacity: 0.6;
+  }
+}
 
 .about {
   background-color: #efefef;
   padding-top: 17px;
   padding-bottom: 16px;
 }
-.about ul {
-  display: flex;
-  justify-content: center;
+@media screen and (max-width: 1023px) {
+  .about__row {
+    display: flex;
+    justify-content: flex-end;
+  }
 }
-.about__item {
+.about__menu {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
   font-size: 14px;
   line-height: 16px;
   color: #333333;
   font-weight: 400;
-  margin-right: 30px;
+}
+.about__menu-item {
   cursor: pointer;
 }
-.about__item:hover {
+.about__menu-item:hover {
   opacity: 0.8;
-}
-.about__item:last-child {
-  margin-right: 0;
 }
 
 .button {
@@ -204,16 +286,22 @@ h6 {
 .contact {
   display: flex;
   align-items: center;
+  gap: 40px;
 }
 .contact__tel {
   font-size: 16px;
   line-height: 19px;
   color: #000;
   font-weight: 400;
-  margin-right: 40px;
 }
 .contact__button {
   border-color: #66c05d;
+}
+@media screen and (max-width: 767px) {
+  .contact {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
 }
 
 .menu {
@@ -247,15 +335,23 @@ h6 {
 .banner {
   background-color: #66c05d;
   overflow: hidden;
-  height: 604px;
+  max-height: 604px;
 }
 .banner__wrapper {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 .banner__info {
-  width: 308px;
+  max-width: 308px;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  margin-right: 5px;
+  flex-shrink: 0;
+}
+@media screen and (max-width: 767px) {
+  .banner__info {
+    flex-shrink: 1;
+  }
 }
 .banner__title {
   font-size: 48px;
@@ -263,6 +359,11 @@ h6 {
   color: #fff;
   font-weight: 700;
   margin-bottom: 50px;
+}
+@media screen and (max-width: 767px) {
+  .banner__title {
+    font-size: 40px;
+  }
 }
 .banner__description {
   font-size: 14px;
@@ -276,13 +377,15 @@ h6 {
   color: #fff;
 }
 .banner__figure {
-  width: 667px;
-  height: 667px;
+  width: 100%;
+  max-width: 667px;
+  max-height: 667px;
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 50%;
   position: relative;
   margin-right: 5px;
   top: -26px;
+  flex-shrink: 1;
 }
 .banner__figure::before {
   content: "";
@@ -309,6 +412,11 @@ h6 {
   top: 36px;
   left: 47px;
 }
+@media screen and (max-width: 767px) {
+  .banner__figure {
+    display: none;
+  }
+}
 
 .products {
   background-color: #efefef;
@@ -320,6 +428,13 @@ h6 {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 17px;
+}
+@media screen and (max-width: 767px) {
+  .products__row {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 30px;
+  }
 }
 .products__title {
   font-size: 24px;
@@ -379,11 +494,22 @@ h6 {
   justify-content: center;
   padding-bottom: 132px;
 }
+@media screen and (max-width: 767px) {
+  .promo__row {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 .promo__item {
   background-color: #66c05d;
   display: flex;
   justify-content: space-between;
   padding: 35px 45px 35px 40px;
+}
+@media screen and (max-width: 767px) {
+  .promo__item {
+    padding: 20px;
+    justify-content: flex-start;
+  }
 }
 .promo__column {
   width: 250px;
@@ -417,6 +543,11 @@ h6 {
   color: #c4c4c4;
   font-weight: 400;
 }
+@media screen and (max-width: 767px) {
+  .promo__mail {
+    display: none;
+  }
+}
 .promo__button {
   height: 35px;
   border-color: #fff;
@@ -434,10 +565,29 @@ h6 {
 .footer__about-row {
   display: flex;
   align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+@media screen and (max-width: 767px) {
+  .footer__about-row {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 .footer__network {
   display: flex;
-  margin-right: 205px;
+  margin-right: 81px;
+}
+@media screen and (max-width: 1023px) {
+  .footer__network {
+    flex: 1 1 auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__network {
+    margin-right: 0;
+  }
 }
 .footer__network-item {
   border: 2px solid #66c05d;
@@ -461,7 +611,6 @@ h6 {
   line-height: 16px;
   color: #000;
   font-weight: 400;
-  flex: 1 1 auto;
 }
 .footer__info {
   background-color: #efefef;
@@ -471,6 +620,14 @@ h6 {
 .footer__info-row {
   display: flex;
   justify-content: space-between;
+}
+@media screen and (max-width: 1023px) {
+  .footer__info-row {
+    text-align: center;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
 }
 .footer__description {
   font-size: 12px;

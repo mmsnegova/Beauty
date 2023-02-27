@@ -6,19 +6,26 @@
     grid-template-columns: repeat(auto-fill, minmax(540px, 1fr));
     justify-content: center;
     padding-bottom: 132px;
+    @media screen and (max-width: $mobile) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
   &__item {
     background-color: $accent;
     display: flex;
     justify-content: space-between;
     padding: 35px 45px 35px 40px;
+    @media screen and (max-width: $mobile) {
+      padding: 20px;
+      justify-content: flex-start;
+    }
   }
   &__column {
     width: 250px;
   }
 
   &__title {
-    @include font(18px, 21px, $white, $large);
+    @include font(18px, 21px, $white, $bold);
     margin-bottom: 25px;
   }
 
@@ -33,6 +40,11 @@
     @include font(14px, 16px, $black);
     &::placeholder {
       @include font(14px, 16px, $light_gray);
+    }
+  }
+  &__mail {
+    @media screen and (max-width: $mobile) {
+      display: none;
     }
   }
 

@@ -2,20 +2,24 @@
   background-color: $light_theme;
   padding-top: 17px;
   padding-bottom: 16px;
-  ul {
-    display: flex;
-    justify-content: center;
+  &__row {
+    @media screen and (max-width: $tablet) {
+      display: flex;
+      justify-content: flex-end;
+    }
   }
-  &__item {
+  &__menu {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
     @include font(14px, 16px, $dark);
-    margin-right: 30px;
+    @extend %nav;
+  }
+  &__menu-item {
     cursor: pointer;
     @extend %opacity;
     &:hover {
       opacity: 0.8;
-    }
-    &:last-child {
-      margin-right: 0;
     }
   }
 }
