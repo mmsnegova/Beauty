@@ -1,19 +1,22 @@
 .banner {
   background-color: $accent;
   overflow: hidden;
-  max-height: 604px;
   &__wrapper {
     display: flex;
     align-items: center;
+    position: relative;
   }
   &__info {
+    position: relative;
+    z-index: 1;
     max-width: 308px;
-    padding-top: 45px;
-    padding-bottom: 45px;
-    margin-right: 5px;
+    padding-top: 192px;
+    padding-bottom: 193px;
     flex-shrink: 0;
     @media screen and (max-width: $mobile) {
       flex-shrink: 1;
+      padding-top: 40px;
+      padding-bottom: 500px;
     }
   }
 
@@ -36,14 +39,14 @@
   }
 
   &__figure {
-    width: 100%;
-    max-width: 667px;
-    max-height: 667px;
+    display: block;
+    width: 667px;
+    height: 667px;
     background-color: $transparent30_white;
     border-radius: 50%;
-    position: relative;
-    margin-right: 5px;
+    position: absolute;
     top: -26px;
+    right: 5px;
     flex-shrink: 1;
 
     &::before {
@@ -53,7 +56,8 @@
       height: 859px;
       border-radius: 50%;
       background-color: $transparent40_white;
-      position: relative;
+      background-size: cover;
+      position: absolute;
       top: -91px;
       left: -91px;
     }
@@ -62,7 +66,6 @@
       display: block;
       width: 584px;
       height: 584px;
-      border-radius: 50%;
       background: url("../../images/black-chair.png");
       background-size: cover;
       background-position: center;
@@ -71,8 +74,11 @@
       top: 36px;
       left: 47px;
     }
+    @media screen and (max-width: $tablet) {
+      right: -190px;
+    }
     @media screen and (max-width: $mobile) {
-      display: none;
+      top: 200px;
     }
   }
 }
