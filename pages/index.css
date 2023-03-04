@@ -145,18 +145,18 @@ h6 {
   -moz-text-size-adjust: 100%;
 }
 
-.conteiner {
+.container {
   max-width: 1110px;
   margin: 0 auto;
 }
 @media screen and (max-width: 1150px) {
-  .conteiner {
+  .container {
     padding-left: 40px;
     padding-right: 40px;
   }
 }
 @media screen and (max-width: 767px) {
-  .conteiner {
+  .container {
     padding-left: 20px;
     padding-right: 20px;
   }
