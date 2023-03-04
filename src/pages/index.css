@@ -3,21 +3,21 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("../../fonts/Roboto-Regular.woff") format("woff"), url("../../fonts/Roboto-Regular.woff2") format("woff2");
+  src: url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.woff2") format("woff2");
 }
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url("../../fonts/Roboto-Medium.woff") format("woff"), url("../../fonts/Roboto-Medium.woff2") format("woff2");
+  src: url("../fonts/Roboto-Medium.woff") format("woff"), url("../fonts/Roboto-Medium.woff2") format("woff2");
 }
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("../../fonts/Roboto-Bold.woff") format("woff"), url("../../fonts/Roboto-Bold.woff2") format("woff2");
+  src: url("../fonts/Roboto-Bold.woff") format("woff"), url("../fonts/Roboto-Bold.woff2") format("woff2");
 }
 * {
   padding: 0;
@@ -180,7 +180,7 @@ h6 {
   }
 }
 .header__logo {
-  background-image: url("../../images/logo.png");
+  background-image: url("../images/logo.png");
   width: 80px;
   height: 80px;
   background-repeat: no-repeat;
@@ -407,7 +407,7 @@ h6 {
   display: block;
   width: 584px;
   height: 584px;
-  background: url("../../images/black-chair.png");
+  background: url("../images/black-chair.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
